@@ -1,0 +1,81 @@
+ONE TIME:
+python -m venv myenv
+pip install -r requirements.txt 
+pip install legacy-cgi
+pip install pypac
+
+Every Instance:
+myenv\Scripts\activate
+cd src
+
+Users, Group and Mapping files:
+
+Project Migration:
+1) py create_user_group_excel.py --config  ""
+2) py create_csv_project.py --config "" 
+3) py project.py --config "" --project ""
+
+
+DATA-SOURCE:
+
+1) py create_csv_project.py --config "H:\Users\801222509\strom"
+2) py datasource.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src"
+
+FOR CUSTOM VIEW:
+--if Server above 2023.1 and above Storm will take care due to server API limitation
+1. py create_csv_project.py --config "H:\Users\801222509\strom"
+2. py datasource.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src"
+3. py create_datasource_excel.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src"
+4. py create_user_group_excel.py --config "H:\Users\801222509\strom"
+5. py workbook_cvn.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src" --user "H:\Users\801222509\strom\src"
+# py workbook_CV_V2025M.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src" --user "H:\Users\801222509\strom\src"
+
+
+
+py create_user_group_excel.py --config "H:\Users\801222509\strom"
+py user_group_migrate.py --config "H:\Users\801222509\strom" --user "H:\Users\801222509\strom\src"
+
+
+FAVS:
+1) py create_user_group_excel.py --config  "H:\Users\801222509\strom"
+2) py create_csv_project.py --config "H:\Users\801222509\strom" 
+3) py favorites.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src" --user "H:\Users\801222509\strom\src"
+
+
+Extract Refresh:
+1) py create_user_group_excel.py --config  "H:\Users\801222509\strom"
+2) py create_csv_project.py --config "H:\Users\801222509\strom" 
+3) py extractschedule.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src"
+
+Subscription:
+
+
+
+PERMISSIONS:
+1) py create_csv_project.py --config "H:\Users\801222509\strom"
+2) py create_user_group_excel.py --config  "H:\Users\801222509\strom"
+3) py permission.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src" --user "H:\Users\801222509\strom\src" --template yes
+4) py permissionf.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom" --project "H:\Users\801222509\strom" --user "H:\Users\801222509\strom\src" --project "H:\Users\801222509\strom\src" --template yes --permission "H:\Users\801222509\strom\src"
+
+
+
+
+
+WORKBOOK:
+1) py create_csv_project.py --config "H:\Users\801222509\strom"
+2) py create_datasource_excel.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src"
+3) py workbook.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src"
+
+CUSTOM VIEWS
+py workbook_cvn.py --config "H:\Users\801222509\strom" --project "H:\Users\801222509\strom\src" --user "H:\Users\801222509\strom\src"
+
+
+
+
+
+
+
+
+
+
+
